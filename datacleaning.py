@@ -9,6 +9,8 @@ df = df.drop(["customerID"], axis=1)
 
 # print("\n")
 # print(df['SeniorCitizen'].dtype)
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
 
 # print(df['SeniorCitizen'].corr(df['TotalCharges']))
 
@@ -23,7 +25,8 @@ for column in new_columns:
 df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
 df = df.dropna(subset=['TotalCharges'])
 # print(df.info())
-# print(df['SeniorCitizen'].corr(df['TotalCharges']))
+print(df.corr())
+print(df['Partner'].corr(df['TotalCharges']))
 # df['TotalCharges'] = df['TotalCharges'].fillna(df['TotalCharges'].median())
 # print(df[df['TotalCharges'].isnull()])
 

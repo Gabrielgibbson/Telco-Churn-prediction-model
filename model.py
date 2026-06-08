@@ -26,7 +26,7 @@ print(predictions)
 print(y_test)
 print(accuracy)
 
-model_filename = 'TelcoChurnModel.pkl'
-joblib.dump(model, model_filename)
-print(f"model saved permanently {model_filename}")
+# model_filename = 'TelcoChurnModel.pkl'
+# joblib.dump(model, model_filename)
+# print(f"model saved permanently {model_filename}")
 
